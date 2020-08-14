@@ -15,24 +15,19 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import {Provider} from 'react-redux';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import MainScreen from './src/Screens/MainScreen/MainScreen';
+import store from './src/config/store';
+import MainScreen from './src/screens/MainScreen/MainScreen';
 
 const App: () => React$Node = () => {
   return (
-    <>
+    <Provider store={store}>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
         <MainScreen />
       </SafeAreaView>
-    </>
+    </Provider>
   );
 };
 

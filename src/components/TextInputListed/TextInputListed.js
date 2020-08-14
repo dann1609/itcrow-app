@@ -34,12 +34,12 @@ const TextInputListed = (props) => {
 
   const onEndEditing = () => {
     onSelectCity(city);
-    setListVisible(false);
   };
 
   const onSelectCity = (city) => {
-    onSearch(city.trim());
+    setListVisible(false);
     onChangeCity(city.trim());
+    onSearch(city.trim());
   };
 
   const reversedList = previousSearchs.map((search) => ({
@@ -56,10 +56,10 @@ const TextInputListed = (props) => {
         style={TextInputListedStyles.cityName}
         onChangeText={(text) => onChangeCity(text)}
         value={city}
-        onEndEditing={onEndEditing}
         onFocus={() => {
           setListVisible(true);
         }}
+        onSubmitEditing={onEndEditing}
       />
       {listVisible && (
         <View>

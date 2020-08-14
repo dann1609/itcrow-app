@@ -8,6 +8,16 @@ const MainScreenStyles = StyleSheet.create({
     marginRight: 'auto',
     fontSize: 30,
   },
+  details: {},
+  detailsTextContainer: {
+    flexDirection: 'row',
+  },
+  detailsIndicatorContainer: {
+    flexDirection: 'column',
+    width: 0,
+    flex: 1,
+    alignItems: 'center',
+  },
 });
 
 export default MainScreenStyles;
